@@ -1,0 +1,12 @@
+-
+  var userIdParam = ''
+  if (userid !== undefined) {
+     userIdParam = '&userid=' + userid
+  }
+  
+div(class="pager")
+  a(href="?page=1" + userIdParam)  First
+  a(href="?page=" + (page>1 ? page - 1 : 1) + userIdParam) Prev
+  a(href="?page=" + (page>totalCount/50? page : page + 1) + userIdParam) Next
+  a(href="?page=" + (Math.floor(totalCount / 50) + 1) + userIdParam) Last
+     

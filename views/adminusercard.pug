@@ -1,0 +1,23 @@
+- 
+  var rank = user.rank || ((page - 1) * 50 + index + 1)
+  function fmt(dv) {
+    var dtm = new Date(dv);
+    return dtm.getFullYear() + "-" + 
+       dtm.getMonth() + "-" + 
+       dtm.getDate() + " " + 
+       dtm.getHours() + ":" + 
+       dtm.getMinutes() 
+  }
+
+div
+  span #{rank}
+  img(src= user.user_img || 'https://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?s=328&d=identicon&r=PG')
+  a(href="https://stackoverflow.com/users/" + user.userid) #{user.username} 
+  span(class='datetime')  #{fmt(user.lastupdate)}
+  span  #{(user.total === undefined ? -1 : user.total)}
+  span(class='datetime')  #{"(" + [user.today, user.week, user.month].join(", ") +")"}
+  form(action="/admin/refresh?page=" + page method="post")
+    input(type="hidden" id="userid" name="userid" value=user.userid)
+    input(type="submit" value="refresh")
+  
+  

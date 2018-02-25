@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:re="http://purl.org/atompub/rank/1.0">
+	<title type="text">MS posts | Charcoal</title>
+	<link rel="self" href="https://heather-eggnog.glitch.me/feed.rss" />
+	<subtitle>Posts matching search criteria from metasmoke.</subtitle>
+	<updated>2017-12-30T17:18:33.102Z</updated>
+	<id>https://metasmoke.erwaysoftware.com/api/v2.0/posts/search.atom</id>
+	<entry>
+		<id>https://metasmoke.erwaysoftware.com/post/78101</id>
+		<title type="text">test</title>
+		<author>
+			<name>username</name>
+			<uri>https://stackoverflow.com/users/12345678</uri>
+		</author>
+		<link rel="alternate" href="//stackoverflow.com/a/446231" />
+		<published>2017-12-30T17:18:33.102Z</published>
+		<updated>2017-12-30T17:18:33.102Z</updated>
+		<summary type="html">lets nog ush it</summary>
+	</entry>
+</feed>

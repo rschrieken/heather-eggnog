@@ -1,0 +1,9 @@
+- var rank = user.rank || ((page - 1) * 50 + index + 1)
+
+div
+  span #{rank}
+  img(src= user.user_img || 'https://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?s=328&d=identicon&r=PG')
+  a(href="https://stackoverflow.com/users/" + user.userid) #{user.username} 
+  span  #{(user.total === undefined ? -1 : user.total)}
+  
+  

@@ -1,0 +1,27 @@
+html
+  include head.pug
+ 
+  body
+  
+    h1 Stack Overflow CVQ Reviews League
+          
+    h3 
+       if pendingCount > 0
+         | Pending: #{pendingCount} / total tracked users: #{totalCount}
+       else
+         | Total tracked users: #{totalCount}
+    
+    if user
+      include topusercard.pug
+    else 
+      include selectuser.pug
+    
+    - var index = 0
+    
+    each user in users
+      include usercard.pug
+      - index++;
+      
+    include pager.pug
+    
+    include footer.pug
